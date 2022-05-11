@@ -7,6 +7,18 @@ module.exports = {
     print: './src/print.js',
   },
 
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
+      },
+    ],
+  },
+
   plugins: [
 
     new HtmlWebpackPlugin({
